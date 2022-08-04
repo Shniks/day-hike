@@ -1,5 +1,5 @@
 class TripTrail < ApplicationRecord
-  belongs_to  :trips
-  belongs_to  :trails 
+  belongs_to  :trip
+  belongs_to  :trail
 
 end
