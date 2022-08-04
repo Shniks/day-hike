@@ -1,7 +1,7 @@
 ---
 Project Title: Day Hike
 Author: Nikhil Shahi
-Date: JAugust 4, 2022
+Date: August 4, 2022
 Test Framework: RSpec
 Test Coverage: 100%
 ---
