@@ -10,14 +10,14 @@ RSpec.describe 'When I visit the trips index and click on link to a trip show' d
       trail_1 = Trail.create!(name: "Mist Trail", address: "Mist Trail Road, Yosemite Valley", length: 7.5)
       trail_2 = Trail.create!(name: "4 Mile Trail", address: "4 Mile Trailhead, Yosemite Valley", length: 12.0)
       trail_3 = Trail.create!(name: "Mirror Lake Loop", address: "Mirror Lake, Yosemite Valley", length: 4.6)
-      binding.pry
+
       TripTrail.create!(trip: trip_1, trail: trail_1)
       TripTrail.create!(trip: trip_1, trail: trail_2)
       TripTrail.create!(trip: trip_2, trail: trail_3)
       TripTrail.create!(trip: trip_2, trail: trail_1)
 
       visit '/trips'
-      within './trip_2' do
+      within '.trip_2' do
         click_link "#{trip_2.name}"
       end
 

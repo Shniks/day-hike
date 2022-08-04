@@ -1,0 +1,7 @@
+<h1> Trips Index </h1>
+
+<% @trips.each do |trip| %>
+  <div class = 'trip_<%= trip.id %>'>
+    <h3><%= link_to trip.name, "/trips/#{trip.id}" %></h3>
+  </div>
+<% end %>
