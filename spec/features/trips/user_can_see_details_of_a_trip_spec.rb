@@ -20,14 +20,14 @@ RSpec.describe 'When I visit the trips index and click on link to a trip show' d
       within '.trip_2' do
         click_link "#{trip_2.name}"
       end
-
+  
       expect(current_path).to eq("/trips/#{trip_2.id}")
       expect(page).to have_content("#{trail_1.name}")
       expect(page).to have_content("#{trail_1.address}")
-      expect(page).to have_content("#{trail_1.length}")
-      expect(page).to have_content("#{trail_2.name}")
-      expect(page).to have_content("#{trail_2.address}")
-      expect(page).to have_content("#{trail_2.length}")
+      expect(page).to have_content("7.5 miles")
+      expect(page).to have_content("#{trail_3.name}")
+      expect(page).to have_content("#{trail_3.address}")
+      expect(page).to have_content("4.6 miles")
     end
   end
 end
