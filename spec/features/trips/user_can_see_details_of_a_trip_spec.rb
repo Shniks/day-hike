@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe 'When I visit the trips index and click on link to a trip show' do
   describe 'I see a list of trails included in the trip' do
-    describe 'I also see the name, address and length for each trail' do
+    it 'I also see the name, address and length for each trail' do
 
       trip_1 = Trip.create!(name: "Early August")
       trip_2 = Trip.create!(name: "Mid August")
