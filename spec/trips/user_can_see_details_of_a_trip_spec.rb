@@ -1,4 +1,4 @@
-require 'rails helper'
+require 'rails_helper'
 
 RSpec.describe 'When I visit the trips index and click on link to a trip show' do
   describe 'I see a list of trails included in the trip' do
