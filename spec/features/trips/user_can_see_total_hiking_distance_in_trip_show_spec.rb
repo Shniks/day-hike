@@ -1,4 +1,4 @@
-equire 'rails_helper'
+require 'rails_helper'
 
 RSpec.describe 'As a visitor' do
   describe 'When I visit a trip show page' do
