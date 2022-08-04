@@ -19,22 +19,16 @@ end
 
 DatabaseCleaner.strategy = :truncation
 
-ActiveRecord::Migration.maintain_test_schema!
+  RSpec.configure do |c|
+    c.before(:each) do
+      DatabaseCleaner.clean
+    end
 
-RSpec.configure do |config|
- config.include Capybara::DSL
-
- config.before(:suite) do
-   DatabaseCleaner.clean_with(:truncation)
- end
-
- config.before :each do
-   DatabaseCleaner.clean
- end
-
- config.after :each do
-   DatabaseCleaner.clean
- end
+    c.after(:each) do
+      DatabaseCleaner.clean
+    end
+    c.include Capybara::DSL
+  end
 
  config.fixture_path = "#{::Rails.root}/spec/fixtures"
  config.use_transactional_fixtures = true
