@@ -21,7 +21,7 @@ RSpec.describe 'When I visit the trips index and click on link to a trip show' d
         click_link "#{trip_2.name}"
       end
 
-      expect(path).to eq("/trips/#{trip_2.id}")
+      expect(current_path).to eq("/trips/#{trip_2.id}")
       expect(page).to have_content("#{trail_1.name}")
       expect(page).to have_content("#{trail_1.address}")
       expect(page).to have_content("#{trail_1.length}")
