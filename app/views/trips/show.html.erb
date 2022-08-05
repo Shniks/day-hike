@@ -6,3 +6,5 @@
     <p>Trail Length: <%= number_with_precision(trail.length, :precision => 1) %> miles</p>
   </div><br/>
 <% end %>
+
+<h3>Planned Total Hiking Distance: <%= number_with_precision(@trip.total_hiking_distance, :precision => 1) %> miles</h3>
