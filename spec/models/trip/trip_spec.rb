@@ -32,6 +32,10 @@ RSpec.describe Trip, type: :model do
     it 'can find the longest hiking distance' do
       expect(@trip.longest_hiking_distance).to eq(12.0)
     end
+
+    it 'can find the shortest hiking distance' do
+      expect(@trip.shortest_hiking_distance).to eq(7.5)
+    end
   end
 
 end
