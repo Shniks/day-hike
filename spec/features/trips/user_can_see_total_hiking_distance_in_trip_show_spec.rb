@@ -17,7 +17,7 @@ RSpec.describe 'As a visitor' do
       TripTrail.create!(trip: trip_2, trail: trail_1)
 
       visit '/trips/2'
-      save_and_open_page
+
       expect(page).to have_content('Planned Total Hiking Distance: 12.1 miles')
     end
   end
