@@ -19,6 +19,10 @@ RSpec.describe 'As a visitor' do
       visit '/trips/1'
 
       expect(page).to have_content('Average Hiking Distance: 9.8 miles')
+
+      visit '/trips/2'
+
+      expect(page).to have_content('Average Hiking Distance: 6.1 miles')
     end
   end
 end
